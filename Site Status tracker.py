@@ -29,6 +29,9 @@ def main():
         "github.com",
         "stackoverflow.com",
         "this-is-a-fake-site-123.com"
+
     ]
     checker = ConnectivityChecker(sites)
     checker.monitor()
+if __name__ == "__main__":
+    main()
