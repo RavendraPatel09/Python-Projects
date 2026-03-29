@@ -38,3 +38,5 @@ def main():
             
     except ValueError:
         print("Please enter a valid numeric amount.")
+if __name__ == "__main__":
+    main()
