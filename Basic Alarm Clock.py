@@ -4,7 +4,6 @@ while True:
     current_time = time.strftime("%H:%M:%S")
     print("Current time:", current_time)
     if current_time == alarm_time:
-        print("Wake up! Alarm ringing")
+        print("Wake up")
         break
     time.sleep(1)
-    
