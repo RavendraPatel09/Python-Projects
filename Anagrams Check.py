@@ -9,3 +9,4 @@ for i in A:#₹
             break#Exit the loop
 else:
     print("Anagrams")
+    
