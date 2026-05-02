@@ -17,3 +17,4 @@ while True:
         print(f"{b}^{e} = {power(b, e)}")
     elif mode == "quit":
         break
+        
