@@ -8,3 +8,4 @@ while True:
         print(f"Valid! User: {parts[0]}, Domain: {parts[1]}")
     else:
         print("Invalid email address.")
+        print
