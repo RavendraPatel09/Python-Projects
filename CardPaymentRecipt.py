@@ -1,13 +1,9 @@
-# Simple Card Payment Receipt Program
-
 print("CARD PAYMENT RECEIPT")
 print("----------------------------")
-
 store_name = "Samarth Mart"
 amount = float(input("Enter payment amount (₹): "))
 card_last4 = input("Enter last 4 digits of card: ")
 transaction_id = input("Enter transaction ID: ")
-
 print("\n------ RECEIPT ------")
 print("Store Name      :", store_name)
 print("Payment Method  : Card")
