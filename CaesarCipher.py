@@ -8,13 +8,10 @@ def caesar_shift(text, shift):
         else:
             result.append(char)
     return "".join(result)
-
 def encode(text, shift):
     return caesar_shift(text, shift)
-
 def decode(text, shift):
     return caesar_shift(text, -shift)
-
 def main():
     mode = input("Encode or decode (e/d): ").lower()
     text = input("Text: ")
@@ -25,6 +22,5 @@ def main():
         print(decode(text, shift))
     else:
         print("Invalid mode")
-
 if __name__ == "__main__":
     main()
