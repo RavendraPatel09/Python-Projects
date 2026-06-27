@@ -1,19 +1,15 @@
 import json
 import os
 from datetime import datetime, timedelta
-
 FILE = "habits.json"
-
 def load_data():
     if os.path.exists(FILE):
         with open(FILE, "r") as f:
             return json.load(f)
     return {}
-
 def save_data(data):
     with open(FILE, "w") as f:
         json.dump(data, f, indent=2)
-
 def mark_done(data):
     habit = input("Habit name: ")
     today = datetime.now().strftime("%Y-%m-%d")
@@ -25,7 +21,6 @@ def mark_done(data):
         print("Marked done for today")
     else:
         print("Already marked today")
-
 def calc_streak(dates):
     if not dates:
         return 0
@@ -37,13 +32,11 @@ def calc_streak(dates):
         else:
             break
     return streak
-
 def show_streaks(data):
     if not data:
         print("No habits tracked yet")
     for habit, dates in data.items():
         print(f"{habit}: streak {calc_streak(dates)} days, total {len(dates)} days")
-
 def main():
     data = load_data()
     while True:
@@ -57,6 +50,5 @@ def main():
             break
         else:
             print("Invalid choice")
-
 if __name__ == "__main__":
     main()
