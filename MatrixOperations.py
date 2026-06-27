@@ -5,10 +5,8 @@ def read_matrix(rows, cols, label):
         row = list(map(float, input().split()))
         matrix.append(row)
     return matrix
-
 def add_matrix(a, b):
     return [[a[i][j] + b[i][j] for j in range(len(a[0]))] for i in range(len(a))]
-
 def multiply_matrix(a, b):
     rows_a, cols_a = len(a), len(a[0])
     rows_b, cols_b = len(b), len(b[0])
@@ -19,14 +17,11 @@ def multiply_matrix(a, b):
         for j in range(cols_b):
             result[i][j] = sum(a[i][k] * b[k][j] for k in range(cols_a))
     return result
-
 def transpose_matrix(a):
     return [[a[i][j] for i in range(len(a))] for j in range(len(a[0]))]
-
 def print_matrix(m):
     for row in m:
         print(" ".join(str(v) for v in row))
-
 def main():
     print("1.Add 2.Multiply 3.Transpose")
     ch = input()
@@ -51,6 +46,5 @@ def main():
         print_matrix(transpose_matrix(a))
     else:
         print("Invalid choice")
-
 if __name__ == "__main__":
     main()
