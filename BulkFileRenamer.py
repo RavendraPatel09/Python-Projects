@@ -1,6 +1,6 @@
 import os
 def bulk_rename(folder, prefix, ext_filter):
-    files = [f for f in git os.listdir(folder) if f.lower().endswith(ext_filter.lower())]
+    files = [f for f in os.listdir(folder) if f.lower().endswith(ext_filter.lower())]
     files.sort()
     count = 0
     for i, filename in enumerate(files, start=1):
