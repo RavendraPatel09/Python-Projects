@@ -1,6 +1,5 @@
 import re
 from collections import Counter
-
 def analyze_log(path):
     levels = Counter()
     timestamps = []
@@ -12,7 +11,6 @@ def analyze_log(path):
                 timestamps.append(match.group(1))
                 levels[match.group(2)] += 1
     return levels, timestamps
-
 def main():
     path = input("Log file path: ")
     levels, timestamps = analyze_log(path)
@@ -22,6 +20,5 @@ def main():
     if timestamps:
         print(f"First entry: {timestamps[0]}")
         print(f"Last entry: {timestamps[-1]}")
-
 if __name__ == "__main__":
     main()
