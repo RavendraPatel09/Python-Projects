@@ -1,6 +1,5 @@
 import time
 import sys
-
 def show_progress(total, delay):
     bar_length = 30
     for current in range(total + 1):
@@ -11,12 +10,10 @@ def show_progress(total, delay):
         sys.stdout.flush()
         time.sleep(delay)
     print()
-
 def main():
     total = int(input("Number of steps: "))
     delay = float(input("Delay per step in seconds: "))
     show_progress(total, delay)
     print("Done")
-
 if __name__ == "__main__":
     main()
