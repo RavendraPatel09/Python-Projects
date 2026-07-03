@@ -1,8 +1,6 @@
 import json
 import os
-
 FILE = "questions.json"
-
 def create_default_questions():
     questions = [
         {"q": "What is the capital of France?", "options": ["Berlin", "Paris", "Rome", "Madrid"], "answer": "Paris"},
@@ -13,13 +11,11 @@ def create_default_questions():
     ]
     with open(FILE, "w") as f:
         json.dump(questions, f, indent=2)
-
 def load_questions():
     if not os.path.exists(FILE):
         create_default_questions()
     with open(FILE, "r") as f:
         return json.load(f)
-
 def ask_question(item):
     print(item["q"])
     for i, opt in enumerate(item["options"]):
@@ -30,7 +26,6 @@ def ask_question(item):
     except (ValueError, IndexError):
         return False
     return selected == item["answer"]
-
 def run_quiz(questions):
     score = 0
     for item in questions:
@@ -40,10 +35,8 @@ def run_quiz(questions):
         else:
             print(f"Wrong. Correct answer: {item['answer']}")
     print(f"Final score: {score}/{len(questions)}")
-
 def main():
     questions = load_questions()
     run_quiz(questions)
-
 if __name__ == "__main__":
     main()
