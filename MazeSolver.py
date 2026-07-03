@@ -1,5 +1,4 @@
 from collections import deque
-
 def parse_maze(lines):
     grid = [list(line) for line in lines]
     start = end = None
@@ -10,7 +9,6 @@ def parse_maze(lines):
             elif val == "E":
                 end = (r, c)
     return grid, start, end
-
 def solve_maze(grid, start, end):
     rows, cols = len(grid), len(grid[0])
     queue = deque([(start, [start])])
@@ -26,7 +24,6 @@ def solve_maze(grid, start, end):
                     visited.add((nr, nc))
                     queue.append(((nr, nc), path + [(nr, nc)]))
     return None
-
 def main():
     path_file = input("Maze file path: ")
     with open(path_file, "r") as f:
@@ -41,6 +38,5 @@ def main():
         print(result)
     else:
         print("No path found")
-
 if __name__ == "__main__":
     main()
