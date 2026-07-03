@@ -25,7 +25,6 @@ def roman_to_int(roman):
             total += value
             prev = value
     return total
-
 def main():
     mode = input("Convert to roman or to int (r/i): ").lower()
     if mode == "r":
@@ -36,6 +35,5 @@ def main():
         print(roman_to_int(roman))
     else:
         print("Invalid mode")
-
 if __name__ == "__main__":
     main()

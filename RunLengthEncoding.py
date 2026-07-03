@@ -13,7 +13,6 @@ def encode(text):
             count = 1
     result.append(f"{prev}{count}")
     return "".join(result)
-
 def decode(encoded):
     result = []
     i = 0
@@ -26,7 +25,6 @@ def decode(encoded):
             i += 1
         result.append(char * int(num))
     return "".join(result)
-
 def main():
     mode = input("Encode or decode (e/d): ").lower()
     text = input("Text: ")
@@ -36,6 +34,5 @@ def main():
         print(decode(text))
     else:
         print("Invalid mode")
-
 if __name__ == "__main__":
     main()
