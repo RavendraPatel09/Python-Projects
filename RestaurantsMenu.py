@@ -30,3 +30,4 @@ if price > 0:
     print("Quantity:", quantity)
     print("Total Amount: ₹", total)
     print("Thank you! Visit again ")
+    
