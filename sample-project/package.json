@@ -1,0 +1,26 @@
+{
+  "name": "sample-project",
+  "version": "1.0.0",
+  "description": "A sample project demonstrating TypeScript setup.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/sample-project.git"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yourusername/sample-project/issues"
+  },
+  "homepage": "https://github.com/yourusername/sample-project#readme"
+}
